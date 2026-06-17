@@ -1,4 +1,4 @@
-# 🚀 Space Invaders
+# 🚀 Earth Defender
 
 A clone of the classic **Space Invaders** arcade game developed in **Vanilla JavaScript**.
 
@@ -145,7 +145,8 @@ The `sounds/` directory contains:
 - Menu music
 
 ---
-
+## Disclaimer
+All art in this game was AI generated
 ## 📈 Features
 
 - [x] Player movement
