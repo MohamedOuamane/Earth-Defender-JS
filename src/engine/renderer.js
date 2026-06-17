@@ -80,19 +80,6 @@ function renderPlayer(e, { widthPx, heightPx }) {
   setSprite(e.el, f, widthPx / f.w, heightPx / f.h);
 }
 
-function renderDebug(engine) {
-  if (!engine.performanceEl || engine.tickCount % 30 !== 0) return;
-
-  engine.performanceEl.innerHTML = `
-    <strong>FPS:</strong> ${engine.fps}<br>
-    <strong>Tick:</strong> ${engine.tickCount}<br>
-    <strong>Lives:</strong> ${engine.player?.lives ?? 0}<br>
-    <strong>Score:</strong> ${engine.score}<br>
-    <strong>Entities:</strong> ${engine.entities.length}<br>
-    <strong>Status:</strong> ${engine.isRunning ? "Running" : "Stopped"}
-  `;
-}
-
 export function toggleAlienFrame(engine) {
   if (!engine.grid) return;
 
@@ -123,6 +110,4 @@ export function render(engine) {
       renderPlayer(e, dims);
     }
   }
-
-  renderDebug(engine);
 }
